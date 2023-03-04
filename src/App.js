@@ -1,11 +1,9 @@
 import * as React from "react";
-import { Button, IconButton } from "@mui/material";
+import { Button, Fab, IconButton } from "@mui/material";
 import DownloadIcon from '@mui/icons-material/Download';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import "./App.css"
-import { palette } from '@mui/system';
-
 
 
 function App() {
@@ -13,8 +11,19 @@ function App() {
 
   return (
     <div>
-    <Button className="github" variant="contained" startIcon={<GitHubIcon/>}></Button>
+    <Button className="github" variant="contained" startIcon={<GitHubIcon/>}> GitHub </Button>
+    <Button className="linkedin" variant="contained" startIcon={<LinkedInIcon/>}> LinkedIn </Button>
+
+    <Fab size="small" color = "primary" aria-label="github">
+      <GitHubIcon/>
+    </Fab>
+
+    <Fab size="small" color = "primary" aria-label="linkedin">
+      <LinkedInIcon/>
+    </Fab>
+
     <Button className="resume_button" variant="contained" endIcon={<DownloadIcon/>}>Resume</Button>
+
     <IconButton aria-label="github" color = "primary" sx={{
       borderRadius: 1,
       bgcolor: "primary",
@@ -24,6 +33,8 @@ function App() {
     <IconButton aria-label="github" color = "primary" sx={{
       borderRadius: 1,
       bgcolor: "primary",
+      backgroundColor: "primary",
+      
     }}>
       <LinkedInIcon/>
     </IconButton>

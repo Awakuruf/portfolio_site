@@ -1,3 +1,11 @@
 .resume_button {
-    background: linear-gradient(to right, #2a28ff, #31d2a5)!important;
+  background: linear-gradient(to right, #31d2a5, #2a28ff) !important;
+}
+
+.github {
+  background: #2a28ff;
+}
+
+.linkedin {
+  background: #2a28ff;
 }
