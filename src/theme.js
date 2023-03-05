@@ -11,5 +11,14 @@ export const theme = createTheme({
         otherColor: {
             main: "#fff"
         }
-    }
+    },
 })
+
+// Breakpoints setting
+//  breakpoints: {
+//         values: {
+//             sm: 480,
+//             md:768,
+//             lg: 1280,
+//         }
+//     }
