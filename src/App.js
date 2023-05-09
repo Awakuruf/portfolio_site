@@ -1,19 +1,21 @@
 import * as React from "react";
 import "./App.css";
-import Navbar from "./Components/Navbar";
-import Header from "./Components/Header";
-import Footer from "./Components/Footer";
-import { Box, Stack } from "@mui/material";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import IndexPage from "./Pages/index";
+import Projects from "./Pages/Projects";
+import About from "./Pages/About";
 
 function App() {
   return (
-    <Box>
-      <Navbar/>
-      <Stack direction="column" spacing={2} justifyContent="space-between">
-        <Header />
-        <Footer />
-      </Stack>
-    </Box>
+    <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<IndexPage />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 
